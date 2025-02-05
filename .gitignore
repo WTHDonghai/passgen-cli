@@ -1,0 +1,36 @@
+# SQLite 数据库文件
+*.db
+password_generator/sqlite/*.db
+
+# 密钥文件
+password_generator/keys/
+*.pem
+*.key
+
+# Python
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# PyInstaller
+build/
+dist/
+*.spec
+*.manifest
+*.exe
+
+# 导出的数据文件
+*.txt
+passwords_export.txt
+
+# 临时文件
+*.log
+*.tmp
+
+# 资源文件（如果不想包含图标）
+# resources/ 
