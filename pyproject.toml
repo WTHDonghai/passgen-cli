@@ -1,0 +1,33 @@
+[tool.mypy]
+plugins = ["sqlalchemy.ext.mypy.plugin"]
+ignore_missing_imports = true
+disable_error_code = ["attr-defined", "arg-type", "misc", "valid-type", "type-arg", "no-redef"]
+strict_optional = false
+follow_imports = "skip"
+warn_return_any = false
+disallow_untyped_defs = false
+check_untyped_defs = false
+allow_redefinition = true
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 88
+target-version = ['py37']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=src --cov-report=term-missing"
+
+[project]
+dependencies = [
+    "sqlalchemy>=2.0.0,<3.0.0",
+] 

@@ -34,3 +34,6 @@ passwords_export.txt
 
 # 资源文件（如果不想包含图标）
 # resources/ 
+passwords_*_*.json
+
+.coverage
